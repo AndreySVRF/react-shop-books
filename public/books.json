@@ -1,34 +1,34 @@
 [
   {
     "id": 0,
-    "title": "Происхождение",
-    "author": "Дэн Браун",
-    "image": "https://cv9.litres.ru/pub/c/elektronnaya-kniga/cover_415/27624091-den-braun-proishozhdenie-27624091.jpg",
-    "price": 710,
+    "title": "Изучаем программирование на JavaScript",
+    "author": "Фримен Эрик, Робсон Элизабет",
+    "image": "https://cdn1.ozone.ru/multimedia/wc1200/1011395255.jpg",
+    "price": 1865,
     "rating": 3
   },
   {
     "id": 1,
-    "title": "1984",
-    "author": "Джордж Оруэлл",
-    "image": "https://cv0.litres.ru/sbc/09233908_cover_185-elektronnaya-kniga--.jpg",
-    "price": 415,
+    "title": "Грокаем алгоритмы. Иллюстрированное пособие для программистов и любопытствующих",
+    "author": "Адитья Бхаргава",
+    "image": "https://cv8.litres.ru/pub/c/pdf-kniga/cover_415/39158380-aditya-bhargava-grokaem-algoritmy-illustrirovannoe-posobie-dlya-p-39158380.jpg",
+    "price": 817,
     "rating": 5
   },
   {
     "id": 2,
-    "title": "Девушка в тумане",
-    "author": "Донато Карризи",
-    "image": "https://cv2.litres.ru/sbc/31635724_cover_185-elektronnaya-kniga-donato-karrizi-devushka-v-tumane.jpg",
-    "price": 464,
+    "title": "Грокаем глубокое обучение",
+    "author": "Эндрю Траск",
+    "image": "https://cv3.litres.ru/pub/c/pdf-kniga/cover_415/48613333-endru-trask-21142618-grokaem-glubokoe-obuchenie-48613333.jpg",
+    "price": 856,
     "rating": 4
   },
   {
     "id": 3,
-    "title": "Империя должна умереть",
-    "author": "Михаил Зыгарь",
-    "image": "https://cv0.litres.ru/sbc/30804904_cover_185-elektronnaya-kniga-mihail-zygar-imperiya-dolzhna-umeret.jpg",
-    "price": 741,
+    "title": "JavaScript. Подробное руководство. 6-е издание",
+    "author": "Флэнаган Дэвид",
+    "image": "https://cdn1.ozone.ru/s3/multimedia-3/wc1200/6012729099.jpg",
+    "price": 830,
     "rating": 3
   },
   {
