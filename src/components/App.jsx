@@ -1,16 +1,15 @@
 import React, {Component} from 'react';
 import axios from 'axios';
-import { connect } from 'react-redux';
-import { setBooks } from './actions/books';
 
 import { Container, Card } from 'semantic-ui-react'
-import Menu from './components/Menu';
-import BookCard from './components/BookCard';
+import Menu from './Menu';
+import BookCard from './BookCard';
+import Sorting from '../containers/Sorting';
 
-import './App.css';
+import '../App.css';
 
 class App extends Component {
-  componentWillMount() {
+  componentDidMount() {
     const { setBooks } = this.props;
     axios.get('./books.json').then(({ data }) => {
       setBooks(data);
@@ -23,7 +22,8 @@ class App extends Component {
     return (
       <Container>
         <Menu />
-        <Card.Group itemsPerRow={5}>
+        <Sorting />
+        <Card.Group itemsPerRow={4}>
           {!isReady
             ? 'Загрузка...'
             : books.map(book => (
@@ -36,13 +36,4 @@ class App extends Component {
   }
 }
 
-const mapStateToProps = ({ books }) => ({
-  books: books.items,
-  isReady: books.isReady
-})
-
-const mapDispatchToProps = dispatch => ({
-  setBooks: books => dispatch(setBooks(books))
-})
-
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default App;
