@@ -1,8 +1,16 @@
 import React from 'react';
-import { Menu } from 'semantic-ui-react'
+import { Menu, Input } from 'semantic-ui-react';
 
-const Sorting = ({setSorting, sortingBy}) => (
-  <Menu secondary>
+const Sorting = ({setSorting, sortingBy, searchQuery, setSearchQuery}) => (
+  <Menu vertical size='small'>
+    <Menu.Item>
+      <Input
+        icon="search"
+        value={searchQuery}
+        placeholder="Поиск..."
+        onChange={event => setSearchQuery(event.target.value)}
+      />
+    </Menu.Item>
     <Menu.Item
       active={sortingBy === 'all'}
       onClick={setSorting.bind(this, 'all')}

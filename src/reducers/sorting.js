@@ -1,20 +1,19 @@
 const initialState = {
-  isReady: false,
-  items: null
+  searchQuery: '',
+  sortingBy: 'all'
 }
 
 export default (state = initialState, action) => {
   switch (action.type) {
-    case 'SET_BOOKS':
+    case 'SET_SEARCH_QUERY':
       return {
         ...state,
-        items: action.payload,
-        isReady: true
+        searchQuery: action.payload
       }
-    case 'SET_IS_READY':
+    case 'SET_SORTING':
       return {
         ...state,
-        isReady: action.payload
+        sortingBy: action.payload
       }
     default:
       return state;

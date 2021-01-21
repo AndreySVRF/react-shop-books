@@ -3,8 +3,8 @@ import { bindActionCreators } from 'redux';
 import * as sortingActions from '../actions/sorting';
 import Sorting from '../components/Sorting';
 
-const mapStateToProps = ({ books }) => ({
-  sortingBy: books.sortingBy
+const mapStateToProps = ({ books, sorting }) => ({
+  sortingBy: sorting.sortingBy
 })
 
 const mapDispatchToProps = dispatch => ({

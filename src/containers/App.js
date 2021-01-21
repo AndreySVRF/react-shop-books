@@ -4,8 +4,8 @@ import * as booksActions  from '../actions/books';
 import App from '../components/App';
 import orderBy from 'lodash/orderBy';
 
-const sortBy = (books, filterBy) => {
-  switch (filterBy) {
+const sortBy = (books, sortingBy) => {
+  switch (sortingBy) {
     case 'all':
       return books;
     case 'author':
@@ -19,8 +19,18 @@ const sortBy = (books, filterBy) => {
   }
 }
 
-const mapStateToProps = ({ books }) => ({
-  books: sortBy(books.items, books.sortingBy),
+const sortingBooks = (books, searchQuery) =>
+  books.filter(obj => (
+    obj.title.toLowerCase().indexOf(searchQuery.toLowerCase().trim()) >= 0 ||
+    obj.author.toLowerCase().indexOf(searchQuery.toLowerCase().trim()) >= 0
+  ))
+
+const searchBooks = (books, sortingBy, searchQuery) => {
+  return sortBy(sortingBooks(books, searchQuery), sortingBy)
+}
+
+const mapStateToProps = ({ books, sorting }) => ({
+  books: books.items && searchBooks(books.items, sorting.sortingBy, sorting.searchQuery),
   isReady: books.isReady
 })
 
